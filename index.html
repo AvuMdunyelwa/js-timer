@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="items/favicon (1).ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div id="off-screen-menu">
+            <ul>
+                <li><img src="items/timer.svg" alt="">Timer</li>
+                <li><img src="items/bell.svg" alt="">Alarm</li>
+                <li><img src="items/clock.svg" alt="">Stopwatch</li>
+                <li><img src="items/globe.svg" alt="">World clock</li>
+            </ul>
+
+        </div>
+
+        <nav>
+            <div id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <section>
+        <div id="timers">
+            <div id="timers-container">
+                <div class="hero-intro">
+                    <img src="items/timer.svg" alt="timer-icon" class="hero-icon">
+                    <h1>You don't have any timers.</h1>
+                    <p>Select "+" below to add a new timer.</p>
+                </div>
+
+                <div class="actual-timer">
+                    <h4>example</h4>
+                    <div class="timer-numbers">
+                        <div id="time">
+                            <input type="text"> :
+                            <input type="text"> :
+                            <input type="text">
+                        </div>
+
+                    </div>
+                    <div class="circle">
+                    </div>
+                    <div class="pause-restart">
+                        <button class="play-btn"><img src="items/play-solid.svg" alt="play-icon"  class="btn"></button>
+                        <button class="restart-btn"><img src="items/restart.svg" alt="restart-icon" class="btn"></button>
+                    </div>
+                </div>
+            </div>
+            <div id="timer-edit-tools">
+                <button id="edit-timers" class="edit-timer-btn">
+                    <img src="items/edit-pencil.svg" alt="edit-icon">
+                </button>
+
+                <button id="add-timer" class="add-timer-btn">
+                    <img src="items/plus-4218d8787a84df23418f18a866369ea5a5b0ec12.svg" alt="add-icon" >
+                </button>
+            </div>
+
+            <dialog id="set-timer">
+                <h2>
+                    Add new timer
+                </h2>
+                <div id="time">
+                    <input type="text"> :
+                    <input type="text"> :
+                    <input type="text">
+                </div>
+
+                <form action="#">
+                    <img src="items/edit-pencil.svg" alt="edit-icon">
+                    <input type="text" id="rename-timer">
+                </form>
+
+                <div id="save-cancel-btn">
+                    <button class="cancel-btn">Cancel</button>
+                    <button class="save-btn">Save</button>
+                </div>
+
+            </dialog>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
