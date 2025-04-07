@@ -39,8 +39,21 @@
                     <p>Select "+" below to add a new timer.</p>
                 </div>
 
-                <div class="actual-timer">
-                    <h4>example</h4>
+            </div>
+            <div id="timer-edit-tools">
+                <button id="edit-timers" class="edit-timer-btn">
+                    <img src="items/edit-pencil.svg" alt="edit-icon">
+                </button>
+
+                <button id="add-timer" class="add-timer-btn">
+                    <img src="items/plus-4218d8787a84df23418f18a866369ea5a5b0ec12.svg" alt="add-icon" >
+                </button>
+            </div>
+
+        </div>
+            <dialog class="modal" id='modal-2'>
+                    <div class='actual-timer'>
+                         <h4>example</h4>
                     <div class="timer-numbers">
                         <div id="time">
                             <input type="text"> :
@@ -55,20 +68,13 @@
                         <button class="play-btn"><img src="items/play-solid.svg" alt="play-icon"  class="btn"></button>
                         <button class="restart-btn"><img src="items/restart.svg" alt="restart-icon" class="btn"></button>
                     </div>
-                </div>
-            </div>
-            <div id="timer-edit-tools">
-                <button id="edit-timers" class="edit-timer-btn">
-                    <img src="items/edit-pencil.svg" alt="edit-icon">
-                </button>
-
-                <button id="add-timer" class="add-timer-btn">
-                    <img src="items/plus-4218d8787a84df23418f18a866369ea5a5b0ec12.svg" alt="add-icon" >
-                </button>
-            </div>
-
-            <dialog id="set-timer">
-                <h2>
+                    </div>
+                   
+                </dialog>
+        
+            <dialog class='modal' id="modal-1">
+                <div class='set-timer'>
+                     <h2>
                     Add new timer
                 </h2>
                 <div id="time">
@@ -87,8 +93,9 @@
                     <button class="save-btn">Save</button>
                 </div>
 
+                </div>
+               
             </dialog>
-        </div>
     </section>
 
     <script src="index.js"></script>
