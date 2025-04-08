@@ -23,12 +23,22 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
-    gap: 0.7em;
     font-size: 1.5rem;
     font-weight: 700;
     width: 100%;
     height: 60px;
-    padding-left: 1em;
+    
+
+    a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        text-decoration: none;
+        gap: 0.7em;
+        color: white;   
+    }
 }
 
 #off-screen-menu ul li:hover {
