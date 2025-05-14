@@ -41,10 +41,6 @@
 
             </div>
             <div id="timer-edit-tools">
-                <button id="edit-timers" class="edit-timer-btn">
-                    <img src="items/edit-pencil.svg" alt="edit-icon">
-                </button>
-
                 <button id="add-timer" class="add-timer-btn">
                     <img src="items/plus-4218d8787a84df23418f18a866369ea5a5b0ec12.svg" alt="add-icon" >
                 </button>
@@ -53,11 +49,11 @@
         </div>
             <dialog class="modal" id='modal-2'>
                     <div class='actual-timer'>
-                         <h4>example</h4>
+                        <div class='cancel-icon' id='close-modal'>
+                            <img src='items/xmark.svg' alt='cancel-icon'>
+                        </div>
                     <div class="timer-numbers">
-                        <div id="time">
-                            <h2>00</h2>:
-                            <h2>00</h2>:
+                        <div id="timer-display">
                             <h2>00</h2>
                         </div>
 
@@ -65,40 +61,13 @@
                     <div class="circle">
                     </div>
                     <div class="pause-restart">
-                        <button class="play-btn"><img src="items/play-solid.svg" alt="play-icon"  class="btn"></button>
-                        <button class="restart-btn"><img src="items/restart.svg" alt="restart-icon" class="btn"></button>
+                        <button class="play-btn" id='pause-btn-timer'><img src="items/play-solid.svg" alt="play-icon"  class="btn"></button>
+                        <button class="restart-btn" id='reset-timer-btn'><img src="items/restart.svg" alt="restart-icon" class="btn"></button>
                     </div>
                     </div>
                    
                 </dialog>
         
-            <dialog class='modal' id="modal-1">
-                <div class='set-timer'>
-                     <h2>
-                    Add new timer
-                </h2>
-                <div id="time">
-                    <input type="text"> :
-                    <input type="text"> :
-                    <input type="text">
-                </div>
-                <p id='alert'>
-                    :Add the missing content 
-                </p>
-
-                <form action="#">
-                    <img src="items/edit-pencil.svg" alt="edit-icon">
-                    <input type="text" id="rename-timer">
-                </form>
-
-                <div id="save-cancel-btn">
-                    <button class="cancel-btn">Cancel</button>
-                    <button class="save-btn">Save</button>
-                </div>
-
-                </div>
-               
-            </dialog>
     </section>
 
     <script src="index.js"></script>
