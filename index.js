@@ -1,4 +1,7 @@
-
+let intervalID = setInterval(updateTimer, 1000);
+let enterMinutes;
+let isPaused = false;
+let timeValue;
 // hamburger navigation
 const hamMenu = document.querySelector('#hamburger');
 const offScreenMenu = document.querySelector('#off-screen-menu');
