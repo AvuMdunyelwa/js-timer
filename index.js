@@ -1,7 +1,15 @@
-
-// hamburger navigation
 const hamMenu = document.querySelector('#hamburger');
 const offScreenMenu = document.querySelector('#off-screen-menu');
+const addTimerBtn = document.querySelector('#add-timer-btn');
+const modal = document.querySelector('#modal');
+const closeModal = document.querySelector('#close-modal');
+const timerDiplay = document.querySelector('#timer-display');
+const pauseBtn = document.querySelector('#pause-btn-timer');
+const resetBtn = document.querySelector('#reset-timer-btn');
+
+
+
+// hamburger navigation
 
 hamMenu.addEventListener('click', () => {
     hamMenu.classList.toggle('active');
@@ -9,17 +17,6 @@ hamMenu.addEventListener('click', () => {
 } )
 
 // modals part
-// modal-1 (add timer)
-
-const modal1 = document.querySelector('#modal-1');
-const openModal1 = document.querySelector('#add-timer');
-const closeModal1 = document.querySelector('#open-modal-2');
-const closeModalbtn = document.querySelector('#close-modal-1');
-const modal2 = document.querySelector('#modal-2');
-
-const input = document.querySelectorAll('input');
-const inputAlert = document.querySelector('#alert')
-
 
 openModal1.addEventListener('click', () => {
     modal1.show()
