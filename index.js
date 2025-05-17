@@ -7,6 +7,12 @@ const timerDiplay = document.querySelector('#timer-display');
 const pauseBtn = document.querySelector('#pause-btn-timer');
 const resetBtn = document.querySelector('#reset-timer-btn');
 
+let intervalID = setInterval(updateTimer, 1000);
+let enterMinutes;
+let isPaused = false;
+let timeValue =;
+
+
 
 
 // hamburger navigation
@@ -16,25 +22,61 @@ hamMenu.addEventListener('click', () => {
     offScreenMenu.classList.toggle('active')
 } )
 
-// modals part
+// add timer part
 
-openModal1.addEventListener('click', () => {
-    modal1.show()
+// opening a timer
+
+addTimerBtn.addEventListener('click', () => {
+    modal.show();
+    if(intervalID !== null) {
+        clearInterval(intervalID)
+    };
+
+    // adding how much should the timer last
+    enterMinutes = prompt('how many minutes');
+    timeValue = Number(enterMinutes) * 60;
+    timerDisplay.innerHTML = '00:00';
+
+    // updating the timer every second
+    intervalID = setInterval(updateTimer, 1000);
+
 })
 
-closeModalbtn.addEventListener('click', () => {
+closeModal.addEventListener('click', () => {
+    // closing the timer
+    modal.close();
 
-        modal1.close()
+    // ending the timer completely
+   alert('There is a timer in progress, if you close it, it shuts down');
+   clearInterval(intervalID);
+   intervalID = null;
 })
 
-closeModal1.addEventListener('click', () => {
-    
-    if(input.value === '') {
-        inputAlert.styles.display = 'block'
+// executing the timer logic every second
+function updateTimer() { 
+   // default timer
+   if(timeValue === 0) {  
+     timerDisplay.innerHTML = '00:00';
+   }
 
-    }else {
-        modal1.close();
-        modal2.show();
+// minutes & seconds calculate
+let minutes = Math.floor(timeValue/60);
+let seconds = timeValue % 60;
 
-    }
-})
+// timer display
+if(seconds < 10) {seconds = '0' + seconds};
+if(minutes < 10) {minutes = '0' + minutes}
+
+timer.Display.innerHTML = `${minutes}:${seconds}`;
+
+// timer decrement 
+timeValue--;
+
+}
+
+
+
+
+
+
+
