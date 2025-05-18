@@ -74,7 +74,24 @@ timeValue--;
 
 }
 
+pauseBtn.addEventListener('click', () => {
+    if(!isPaused) {
+        clearInterval(intervalID);
+        isPaused = true;
+        const svgImage = document.querySelector('.pause-svg');
+        svgImage.src = 'items/play-solid.svg';
+    }else {
+        intervalID = setInterval(updateTimer, 1000);
+        isPaused = false;
 
+        const svgImage2 = document.querySelector('.pause.svg');
+        svgImage2.src = .items/pause-solid.svg';
+    }
+});
+
+resetBtn.addEventListener('click', () => {
+    timeValue = Number(enterMinutes) * 60;
+})
 
 
 
