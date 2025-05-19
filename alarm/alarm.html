@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="alarm.css">
+    <title>Alarm</title>
+    <link rel="shortcut icon" href="items/favicon (1).ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="off-screen-menu">
+            <ul>
+                <li><a href="index.html"><img src="items/hourglass (1).svg" alt="timer-icon">Timer</a></li>
+                <li><a href="alarm.html" class="active"><img src="items/bell.svg" alt="timer-icon">Alarm</a></li>
+                <li><a href="stopwatch/stopwatch.html" ><img src="items/timer-solid.svg" alt="timer-icon">Stopwatch</a></li>
+                <li><a href="worldclock.html" ><img src="items/globe.svg" alt="timer-icon">World clock</a></li>
+                
+            </ul>
+
+        </div>
+
+        <nav>
+            <div id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <section>
+        <div id="alarm">
+            <div id="alarm-container">
+                <div id="alarm-display-container">
+                    <div id="container">
+                        <h1 id="card-display-time">
+                            
+                        </h1>
+                        <div id='time-left-update'>
+                            <img src="items/bell.svg" alt="bell-icon">
+                            <p id='time-left-display'>
+                                in 12 hours, 1 minute
+                            </p>
+                        </div>
+                            <h3 id="alarm-name-display">
+                                alarm name
+                            </h3>
+                            <div id="days-active">
+                                
+                            </div>
+        
+                    </div>
+                </div>
+                <div class="hero-section">
+                    <div id="hero-display">
+                        <img src="items/bell.svg" alt="timer-icon" class="hero-icon">
+                        <h1>You don't have any alarms.</h1>
+                        <p>Select "+" below to add a new alarm.</p>
+
+                    </div>
+                    
+                    <div id="alarm-edit-tools">
+                        <button id="add-alarm-btn" class="add-alarm-btn" >
+                            <img src="items/plus-4218d8787a84df23418f18a866369ea5a5b0ec12.svg" alt="add-icon" >
+                        </button>
+                    </div>
+                </div>
+             
+            </div>
+            
+
+        </div>
+    </section>
+
+    <dialog id="modal">
+        <div id="set-alarm-wrapper">
+
+
+            <h2 id="alarm-display">
+                00:00
+            </h2>
+
+            <form action="#">
+                <input type="text" placeholder="alarm name" id="enter-alarm-name">
+            </form>
+
+            <div id="select-days" class="days-of-alarm">
+
+                <button id="which-days" class="sun">Su</button>
+                <button id="which-days" class="mon">Mo</button>
+                <button id="which-days" class="tue">Tu</button>
+                <button id="which-days" class="wed">We</button>
+                <button id="which-days" class="thur">Th</button>
+                <button id="which-days" class="fri">Fri</button>
+                <button id="which-days" class="sat">Sa</button>
+                
+            </div>
+
+            <div id="control-btn">
+                <button id="save-btn">save</button>
+                <button id="cancel-btn">cancel</button>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="alarm.js"></script>
+</body>
+</html>
