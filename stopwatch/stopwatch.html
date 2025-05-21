@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stopwatch</title>
+    <link rel="shortcut icon" href="items/favicon (1).ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="stopwatch.css">
+</head>
+<body>
+    <header>
+        <div id="off-screen-menu">
+            <ul>
+                <li><a href="index.html"><img src="items/hourglass (1).svg" alt="timer-icon">Timer</a></li>
+                <li><a href="alarm.html" ><img src="items/bell.svg" alt="timer-icon">Alarm</a></li>
+                <li><a href="stopwatch/stopwatch.html"  class="active"><img src="items/timer-solid.svg" alt="timer-icon">Stopwatch</a></li>
+                <li><a href="worldclock.html" ><img src="items/globe.svg" alt="timer-icon">World clock</a></li>
+                
+            </ul>
+
+        </div>
+
+        <nav>
+            <div id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+    </header>
+
+    <section>
+        <div id="stopwatch">
+            <div id="stopwatch-container">
+
+                <div class="hero-section">
+                    <div id="hero-display">
+                        <img src="items/timer-solid.svg" alt="timer-icon" class="hero-icon">
+                        <h1>You don't have any stopwatch in progress</h1>
+                        <p>Select "+" below to add a stopwatch.</p>
+    
+                    </div>
+
+                    <div id="stopwatch-add-tool">
+
+                        <button id="add-stopwatch-btn" class="add-stopwatch-btn" >
+                            <img src="items/plus-4218d8787a84df23418f18a866369ea5a5b0ec12.svg" alt="add-icon" >
+                        </button>
+                    </div>
+                    
+                </div>
+
+                <dialog id="modal">
+                    <div id="stopwatch-popup">
+                        <img src="items/xmark.svg" alt="close-icon" class="cancel-icon" id="close-stopwatch">
+                        <div id="time">
+                              00:00:00
+                        </div>
+    
+                        <div id="buttons">
+                            <button id="play-btn"><img src="items/play-solid.svg" alt="play-icon"></button>
+                            <button id="pause-btn"><img src="items/pause-solid.svg" alt="play-icon"></button>
+                            <button id="reset-btn"><img src="items/restart.svg" alt="reset-icon"></button>
+                        </div>
+                    </div>
+                </dialog>
+            </div>
+        </div>
+    </section>
+
+    <script src="stopwatch.js"></script>
+</body>
+</html>
